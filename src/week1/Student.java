@@ -5,12 +5,12 @@ public class Student {
     // TODO: khai báo các thuộc tính cho Student
 
     // TODO: khai báo các phương thức getter, setter cho Student
-    private:
-        string  name,
+    private
+        String  name,
                 group,
                 id,
                 email;
-    public:
+    public
         String getName()  {return name;}
         String getGroup() {return group;}
         String getId()    {return id;}
@@ -38,7 +38,7 @@ public class Student {
         name  = "Student";
         id    = "000";
         group = "INT22041";
-        email = "uet@vnu.edu.vn"
+        email = "uet@vnu.edu.vn";
 
     }
 
