@@ -69,8 +69,9 @@ public class Student {
         email= s.email;
     }
 
-    String getInfo() {
-        // TODO:
-        return null; // xóa dòng này sau khi cài đặt
+    String  getInfo() {
+
+        return getName() + "\n" + getId() +"\n" + getEmail() + "\n" + getGroup();
+        //   return null; // xóa dòng này sau khi cài đặt
     }
 }
