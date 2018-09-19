@@ -4,7 +4,7 @@ public class StudentManagement {
 
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
 
-    public Student Students[] = new Student[100];
+    private Student Students[] = new Student[100];
     private int n = 0;
     public void setList(Student st)
         {
@@ -62,7 +62,7 @@ public class StudentManagement {
         j = i;
         while(Students[j+1] != null)
         {
-            Students[j] = new Student(Students[j+1]);
+            Students[j] =  Students[j+1];
             j++;
             i=j;
         }
