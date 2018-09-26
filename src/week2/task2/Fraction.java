@@ -90,8 +90,14 @@ public class Fraction {
     public boolean equals(Object Obj)
     {
         if(Obj == null) return false;
-        if(!( Obj instanceof Fraction)) return false;
-        return true;
+
+        else if(!( Obj instanceof Fraction)) return false;
+            else {
+                Fraction other = (Fraction) Obj;
+                return(this.numer * other.denom == this.denom * other.numer );
+        }
+
+
 
     }
 
@@ -104,10 +110,11 @@ public class Fraction {
              Fraction F = new Fraction();
              a = new Fraction(2,3);
              b = new Fraction(4,8);
-             //F.Print(a.add(b));
-             //F.Print(a.subtract(b));
-            // F.Print(a.multiply(b));
+             F.Print(a.add(b));
+             F.Print(a.subtract(b));
+             F.Print(a.multiply(b));
              F.Print(a.divide(b));
+             System.out.println(a.equals(b));
 
     }
 }
