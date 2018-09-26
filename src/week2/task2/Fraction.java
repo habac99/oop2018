@@ -73,7 +73,7 @@ public class Fraction {
         Fraction result = new Fraction();
         result.numer = this.numer * other.numer;
         result.denom = this.denom * other.denom;
-        return result;
+        return result.simplify(result);
 
     }
 
@@ -83,12 +83,15 @@ public class Fraction {
         Fraction result = new Fraction();
         result.numer = this.numer * other.denom;
         result.denom = this.denom * other.numer;
-        return result;
+        return result.simplify(result);
 
     }
 
     public boolean equals(Object Obj)
     {
+        if(Obj == null) return false;
+        if(!( Obj instanceof Fraction)) return false;
+        return true;
 
     }
 
@@ -102,9 +105,9 @@ public class Fraction {
              a = new Fraction(2,3);
              b = new Fraction(4,8);
              //F.Print(a.add(b));
-             F.Print(a.subtract(b));
+             //F.Print(a.subtract(b));
             // F.Print(a.multiply(b));
-            // F.Print(a.divide(b));
+             F.Print(a.divide(b));
 
     }
 }
