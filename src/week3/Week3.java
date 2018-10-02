@@ -48,10 +48,10 @@ public class Week3 {
        // else return null;
     }
 
-    public static void main(String[] a){
+   /* public static void main(String[] a){
         int array[] = {1, 9,7,4,3,12,0,-2};
         System.out.println(max(6,7));
         System.out.println(minOfArray(array));
         System.out.println(calculateBMI(60.0, 1.7));
-    }
+    }*/
 }
