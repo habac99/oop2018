@@ -18,6 +18,8 @@ class point{
 
 }
 class Shape{
+    protected  String color;
+
 
 }
 class Circle extends Shape{

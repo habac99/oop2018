@@ -21,6 +21,7 @@ public class MainFrame extends JPanel implements ActionListener {
 
         Ellipse2D circle = new Ellipse2D.Double(x,y,60,60) ;
         Rectangle2D rec    = new Rectangle2D.Double(x1, y1,30,40);
+
         g2.fill(circle);
         g2.fill(rec);
         t.start();
