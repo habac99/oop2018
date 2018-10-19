@@ -1,33 +1,26 @@
 package week5_6;
 
-
 import javax.swing.*;
-import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 
-public class Diagram extends JFrame{
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-
-
-}
-class Layer extends JPanel{
-
-}
-class point{
-    private int x,y;
-
-
-}
-class Shape{
-    protected  String color;
+public class Diagram  {
+    public static void main(String[] a){
+//        ArrayList<Layer> layer = new ArrayList<>();
+//        layer.add(new Layer());
+        JFrame mainFrame = new JFrame("Test");
+        Layer layer = new Layer();
 
 
-}
-class Circle extends Shape{
+        mainFrame.add(layer);
+        //layer.get(0).Show();
 
-}
-class Rectangle extends Shape{
+        mainFrame.setVisible(true);
 
-}
-class Square extends Rectangle{
+        mainFrame.setSize(600,600);
+        mainFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
 
 }

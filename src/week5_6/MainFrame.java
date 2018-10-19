@@ -9,10 +9,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
 
 public class MainFrame extends JPanel implements ActionListener {
     public Timer t = new Timer(5, this);
-    public double x = 0, y = 0, velX = 2, velY = 2,x1 = 3, y1 =6,velX1  = 3,velY1 = 4;
+    public double x = 0, y = 0;
+    public double velX = 2, velY = 2,x1 = 3, y1 =6,velX1  = 3,velY1 = 4;
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
@@ -51,6 +53,9 @@ public class MainFrame extends JPanel implements ActionListener {
     public static  void main(String[] a){
         MainFrame mF = new MainFrame();
         JFrame F = new JFrame();
+//        ArrayList<Layer>  layers = new ArrayList<>();
+//        layers.add(new Layer());
+//        mF.add(new Layer());
         F.add(mF);
         F.setVisible(true);
         F.setTitle("Test");

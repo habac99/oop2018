@@ -1,132 +1,52 @@
-//package week5_6;
-//
-//import javax.swing.*;
-//import java.awt.*;
-//
-//public class Circle extends  JPanel {
-//    double radius = 1.0;
-//    double PI = Math.PI;
-//    double coordX, coordY, velX,velY;
-//
-//    public Circle() {
-//
-//    }
-//    public Circle(double _radius,double cX, double cY) {
-//
-//        this.radius = _radius;
-//        this.coordX = cX;
-//        this.coordY = cY;
-//    }
-//
-//
-//    /**
-//     *
-//     * @return độ dài bán kính
-//     */
-//    public double getRadius() {
-//        return radius;
-//
-//    }
-//
-//    /**
-//     * hàm trả về bán kính
-//     * @param _radius bán kính
-//     */
-//    public void setRadius(double _radius) {
-//        radius = _radius;
-//
-//
-//    }
-//
-////    /**
-////     *
-////     * @param y vận tốc theo y
-////     */
-////    @Override
-////    public void setVelY(double y) {
-////        super.setVelY(y);
-////    }
-////
-////    /**
-////     *
-////     * @param x vận tốc theo x
-////     */
-////    @Override
-////    public void setVelX(double x) {
-////        super.setVelX(x);
-////    }
-////
-////    /**
-////     *
-////     * @return toạ độ theo x
-////     */
-////    @Override
-////    public double getCoordX() {
-////        return super.getCoordX();
-////    }
-////
-////    /**
-////     *
-////     * @return toạ độ theo y
-////     */
-////    @Override
-////    public double getCoordY() {
-////        return super.getCoordY();
-////    }
-////
-////    /**
-////     *
-////     * @return vận tốc theo x
-////     */
-////    @Override
-////    public double getVelX() {
-////        return super.getVelX();
-////    }
-////
-////    /**
-////     *
-////     * @return vận tốc theo y
-////     */
-////    @Override
-////    public double getVelY() {
-////        return super.getVelY();
-////    }
-////
-////    /**
-////     *
-////     * @param y toạ đọ theo y
-////     */
-////    @Override
-////    public void SetCoordY(double y) {
-////        super.SetCoordY(y);
-////    }
-////
-////    /**
-////     *
-////     * @param x toạ đọ theo x
-////     */
-////    @Override
-////    public void SetCoordX(double x) {
-////        super.SetCoordX(x);
-////    }
-//    public void move(){
-//        if (coordX>  550 || coordX <0){
-//            velX = -velX;
-//        }
-//        if (coordY>  350 || coordY <0){
-//            velY = -velY;
-//        }
-//        coordX+=velX;
-//        coordY+=velY;
-//    }
-//
-////    public void paint (Graphics g){
-////        super.paint(g);
-////        g.setColor(Color.red);
-////        g.fillOval(coordX,coordY, 50, 50);
-////
-////    }
-//}
-//
-//
-//
+package week5_6;
+/**
+ * class Circcle kế thừa Shape
+ */
+
+import java.awt.*;
+import java.util.Random;
+
+public class Circle extends Shape {
+    private int radius;
+
+
+    /**
+     * hàm khởi tạo hình tròn
+     */
+    public Circle(){
+        Random ran = new Random();
+        this.radius = ran.nextInt(100);
+        this.coord.setX(ran.nextInt(30));
+        this.coord.setY(ran.nextInt(30));
+        this.vel.setX( ran.nextInt(7));
+        this.vel.setY( ran.nextInt(7));
+        this.color   = new Color(ran.nextInt(255),ran.nextInt(255),ran.nextInt(255));
+
+
+    }
+
+    /**
+     *
+     * @return độ dài bán kính
+     */
+    public int getRadius() {
+        return radius;
+    }
+
+    /**
+     *
+     * @param radius : độ dài bán kính muốn thiết lập
+     */
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    /**
+     * hàm di chuyển
+     */
+    @Override
+    public void move() {
+        super.move();
+    }
+}
