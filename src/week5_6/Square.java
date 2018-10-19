@@ -37,6 +37,9 @@ public class Square extends Rectangle {
         this.size = size;
     }
 
+    /**
+     * di chuyển
+     */
     @Override
     public void move() {
         super.move();

@@ -8,16 +8,15 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class Diagram  {
     public static void main(String[] a){
-//        ArrayList<Layer> layer = new ArrayList<>();
-//        layer.add(new Layer());
-        JFrame mainFrame = new JFrame("Test");
+
+        JFrame mainFrame = new JFrame("Week 5");
         Layer layer = new Layer();
-
-
+        Layer layer2 = new Layer();
+        layer.removeTriangle();
         mainFrame.add(layer);
-        //layer.get(0).Show();
 
         mainFrame.setVisible(true);
+
 
         mainFrame.setSize(600,600);
         mainFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);

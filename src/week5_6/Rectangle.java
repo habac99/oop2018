@@ -60,6 +60,9 @@ public class Rectangle extends Shape {
         this.length = length;
     }
 
+    /**
+     * di chuyển
+     */
     @Override
     public void move() {
         super.move();

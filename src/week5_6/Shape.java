@@ -9,15 +9,25 @@ public  class Shape {
     protected Point vel   = new Point();
 
 
-
-
+    /**
+     *
+     * @return trả về màu
+     */
     public Color getColor() {
         return color;
     }
 
+    /**
+     * đặt màu
+     * @param color
+     */
     public void setColor(Color color) {
         this.color = color;
     }
+
+    /**
+     * di chuyển hình ảnh
+     */
     public  void move(){
         if(coord.getX()<0 || coord.getX() > 500){
             vel.setX(-vel.getX());
