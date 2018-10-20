@@ -26,6 +26,8 @@ public class Diagram  {
         System.out.println("Số hình ban đầu là :"  + layer.layer.size());
         layer.removeTriangle();
         System.out.println("Số hình sau khi xoá tam giác là: " +  layer.layer.size());
+        layer.removeCircle();
+        System.out.println("Số hình sau khi xoá hình tròn là : " + layer.layer.size());
 
 
 
@@ -34,7 +36,8 @@ public class Diagram  {
         mainFrame.setVisible(true);
 
 
-        mainFrame.setSize(600,600);
+        //mainFrame.setSize(600,600);
+        mainFrame.setBounds(400,20,600,600);
         mainFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
