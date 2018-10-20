@@ -111,17 +111,30 @@ public class Layer extends JPanel implements  ActionListener {
         }
 
     }
+
+    /**
+     * hàm xoá hình tròn
+     */
     public void removeCircle(){
         int i ;
         for(i=0;i<layer.size();i++){
 
             if(layer.get(i) instanceof Circle){
                 layer.remove(i);
+
                 i--;
             }
         }
 
     }
+    /**
+     * hàm trả về layer
+     */
+    public ArrayList<Shape> getLayer(){
+        return layer;
+
+    }
+
 
 }
 

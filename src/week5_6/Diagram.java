@@ -1,13 +1,14 @@
 package week5_6;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class Diagram  {
-    public void removeCircle(ArrayList<Shape> layer){
+    public static void  removeCircle2(ArrayList<Shape> layer){
         int i ;
         for(i=0;i<layer.size();i++){
 
@@ -26,9 +27,10 @@ public class Diagram  {
         System.out.println("Số hình ban đầu là :"  + layer.layer.size());
         layer.removeTriangle();
         System.out.println("Số hình sau khi xoá tam giác là: " +  layer.layer.size());
-        layer.removeCircle();
+        //layer.removeCircle();
+        removeCircle2(layer.getLayer());
         System.out.println("Số hình sau khi xoá hình tròn là : " + layer.layer.size());
-
+        mainFrame.setBackground(Color.blue);
 
 
         mainFrame.add(layer);
