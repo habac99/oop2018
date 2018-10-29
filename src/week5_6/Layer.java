@@ -15,6 +15,7 @@ public class Layer extends JPanel implements  ActionListener {
     public Timer t = new Timer(5, this);
     public final int shapeCount = 25;
     public ArrayList<Shape> layer = new ArrayList<>();
+    private boolean visible;
     /**
      * khỏi tạo layer
      */
@@ -22,7 +23,7 @@ public class Layer extends JPanel implements  ActionListener {
         int i = 0;
         Random ran = new Random();
         while(i<= shapeCount){
-            int j = ran.nextInt(3);
+            int j = ran.nextInt(4);
             if(j == 3){
                 layer.add(new Rectangle());
             }
@@ -37,6 +38,7 @@ public class Layer extends JPanel implements  ActionListener {
             }
             i++;
         }
+        visible = true;
 
 
     }
@@ -135,7 +137,15 @@ public class Layer extends JPanel implements  ActionListener {
 
     }
 
+    @Override
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
 
+    @Override
+    public boolean isVisible() {
+        return visible;
+    }
 }
 
 
