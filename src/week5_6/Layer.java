@@ -146,6 +146,24 @@ public class Layer extends JPanel implements  ActionListener {
     public boolean isVisible() {
         return visible;
     }
+
+    public void RemoveDuplicate(){
+        int i,j;
+        for( i = 0;i<layer.size();i++){
+            for(j=i+1;j<layer.size();j++) {
+                if (layer.get(i) instanceof Circle && layer.get(j) instanceof Circle) {
+                    Circle c1 = (Circle) layer.get(i);
+                    Circle c2 = (Circle) layer.get(j);
+                    if (c1.getRadius() == c2.getRadius() && c1.coord.getX() == c2.coord.getX() && c1.coord.getY() == c2.coord.getY()) {
+                        layer.remove(j);
+                        j--;
+                    }
+                }
+            }
+        }
+    }
+
+
 }
 
 
