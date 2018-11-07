@@ -11,13 +11,14 @@ public class ExpressionTest {
         Multiplication mul  = new Multiplication(two, three);
         Addition add = new Addition(sub, mul);
         Square sq2 = new Square(add);
-        System.out.println(sq2.evaluate());
+
 
         try{
             int a = 45/0;
         }catch (ArithmeticException e){
             e.printStackTrace();
         }
+        System.out.println(sq2.evaluate());
 
     }
 }
